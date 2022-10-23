@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --num: 16;
+  --back: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(var(--num), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--num), minmax(0, 1fr));
+  width: 100%;
+  height: 40vh;
+  justify-content: stretch;
+  align-content: stretch;
+  justify-items: stretch;
+  align-self: stretch;
+  overflow: hidden;
+  border: 0.5px solid blue;
+}
+
+.container div {
+  background: var(--back);
+  padding: 1em;
+}
+
+.secondDiv {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.black {
+  background: black;
+}
+
+button {
+  background: blue;
+  margin: 2rem 6rem 2rem 6rem;
+  padding: 0.3rem;
+  color: white;
+  font-size: 120%;
+}
